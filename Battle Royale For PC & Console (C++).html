@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clark - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">ROSHAN</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	    </div>
+	  </nav>
+	  <section class="ftco-section pt-4 pb-2" style="margin-top: 40px;">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="mb-0" style="font-size: 2.5rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Battle Royale for PC & Console (C++)</h1>
+      </div>
+    </div>
+    </div>
+      </section>
+
+    <section class="ftco-section pt-2" style="margin-top: 10px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <p class="mb-3">A modular C++ shooter framework for Unreal Engine 5, developed as a foundation for building a
+  complete PC and console battle royale experience. The project combines a clean C++ gameplay
+  architecture with Blueprint-driven customization, allowing weapons, pickups, inventory items, and
+  gameplay parameters to be configured without modifying the underlying C++ systems.
+</p>
+<p>
+  The framework focuses on building reusable shooter mechanics that can be extended into larger
+  multiplayer experiences while keeping the core gameplay architecture organized and maintainable.
+</p>
+            <p>
+              <img src="images/Battle Royale For PC & Console (C++)/00.jpg" alt="" class="img-fluid">
+            </p>
+            <h2 class="mb-3">Key Features</h2>
+<ul>
+<li><b>Modular Weapon System</b></li>
+<ul>
+  <li>Supports rifles, pistols, and shotguns.</li>
+  <li>Weapon behavior is driven through the <b>FWeaponData</b> structure.</li>
+  <li>Damage, fire rate, ammunition, sounds, visuals, and other parameters are exposed for Blueprint configuration.</li>
+  <li>Designed to make creating new weapon variants quick and consistent.</li>
+</ul>
+
+<li><b>Dual Weapon System</b></li>
+<ul>
+  <li>Equip both primary and secondary weapons.</li>
+  <li>Smooth weapon switching with animation support.</li>
+  <li>Modular architecture for integrating additional weapon types.</li>
+</ul>
+
+<li><b>Inventory &amp; Pickup System</b></li>
+<ul>
+  <li>World-based pickup system for weapons, ammunition, grenades, health items, and backpacks.</li>
+  <li>Inventory management for equipped weapons, consumables, and ammunition.</li>
+  <li>Backpacks dynamically increase available inventory capacity.</li>
+  <li>Designed around reusable pickup base classes.</li>
+</ul>
+
+<li><b>Grenade System</b></li>
+<ul>
+  <li>Real-time grenade trajectory prediction.</li>
+  <li>Visual prediction path and throw endpoint.</li>
+  <li>Ability to cancel grenade throws.</li>
+  <li>Physics-based grenade explosions with configurable behavior.</li>
+</ul>
+
+<li><b>Health &amp; Consumable System</b></li>
+<ul>
+  <li>Health recovery through consumable items such as bandages and energy drinks.</li>
+  <li>Configurable healing values exposed to Blueprint.</li>
+  <li>Designed for easy balancing and extension with additional consumables.</li>
+</ul>
+
+<li><b>Dynamic Crosshair</b></li>
+<ul>
+  <li>Real-time crosshair feedback based on player movement and shooting.</li>
+  <li>Provides visual feedback during different weapon and movement states.</li>
+  <li>Designed to support different weapon-specific crosshair behaviors.</li>
+</ul>
+
+<li><b>Weapon Wheel</b></li>
+<ul>
+  <li>Radial weapon-selection interface.</li>
+  <li>Allows players to quickly switch between available weapons.</li>
+  <li>Integrated with the inventory and dual-weapon systems.</li>
+</ul>
+
+<li><b>Player Locomotion</b></li>
+<ul>
+  <li>Walking, sprinting, crouching, and jumping.</li>
+  <li>Smooth movement transitions and animation blending.</li>
+  <li>Integrated with the weapon and combat systems.</li>
+</ul>
+</ul>
+<h2 class="mb-3">C++ Architecture</h2>
+
+<p>
+  The project includes 18 core C++ classes with Blueprint-derived children, providing a structured
+  foundation for extending the gameplay systems.
+</p>
+
+<p><b>Key classes include:</b></p>
+
+<ul>
+  <li><b>APlayerCharacter</b> — Core player movement, inventory, and combat logic.</li>
+  <li><b>AWeaponBaseActor</b> — Base class for all weapon types.</li>
+  <li><b>AShotgunBase</b> — Shotgun-specific firing and spread behavior.</li>
+  <li><b>ABulletBase</b> — Projectile logic with configurable velocity and visuals.</li>
+  <li><b>ABulletShellBase</b> — Ejected shell actor for weapon feedback.</li>
+  <li><b>UGrenadeSystem</b> — Grenade trajectory prediction and throwing logic.</li>
+  <li><b>AGrenadeBase</b> — Grenade actor and explosion behavior.</li>
+  <li><b>APickupBase</b> — Base class for world pickups.</li>
+  <li><b>AAmmoBase</b> — Ammunition pickup handling.</li>
+  <li><b>AHealthKitBase</b> — Base class for health consumables.</li>
+  <li><b>ABagpackBase</b> — Backpack system for increasing inventory capacity.</li>
+  <li><b>AGrenadeSplineEndPointBase</b> — Grenade trajectory endpoint visualization.</li>
+</ul>
+
+<h2 class="mb-3">Technical Focus</h2>
+
+<p>
+  The primary focus of this project is modular C++ gameplay architecture. Core systems are
+  implemented in C++ while gameplay parameters are exposed to Blueprint, creating a workflow where
+  developers can build and balance weapons, pickups, consumables, and other gameplay elements
+  without repeatedly modifying the underlying code.
+</p>
+
+<p>
+  The framework demonstrates practical experience with Unreal Engine C++ gameplay programming,
+  modular class architecture, weapon systems, inventory, pickups, projectiles, grenades, player
+  locomotion, and Blueprint-C++ integration.
+</p>
+          </div> <!-- .col-md-8 -->
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box">
+             <div class="sidebar-box ftco-animate">
+               <h3 class="heading-sidebar">Project Gallery</h3>
+               <div class="project-gallery">
+                <a href="images/Battle Royale For PC & Console (C++)/01.jpg" class="d-block mb-3">
+                <img src="images/Battle Royale For PC & Console (C++)/01.jpg" alt="Project image 2" class="img-fluid rounded">
+                </a>
+                <a href="images/Battle Royale For PC & Console (C++)/02.jpg" class="d-block mb-3">
+                <img src="images/Battle Royale For PC & Console (C++)/02.jpg" alt="Project image 2" class="img-fluid rounded">
+                </a>
+                <a href="images/Battle Royale For PC & Console (C++)/03.jpg" class="d-block mb-3">
+                <img src="images/Battle Royale For PC & Console (C++)/03.jpg" alt="Project image 2" class="img-fluid rounded">
+                </a>
+                <a href="images/Battle Royale For PC & Console (C++)/04.jpg" class="d-block mb-3">
+                <img src="images/Battle Royale For PC & Console (C++)/04.jpg" alt="Project image 2" class="img-fluid rounded">
+                </a>
+                <a href="images/Battle Royale For PC & Console (C++)/05.jpg" class="d-block mb-3">
+                <img src="images/Battle Royale For PC & Console (C++)/05.jpg" alt="Project image 2" class="img-fluid rounded">
+                </a>
+                <a href="images/Battle Royale For PC & Console (C++)/06.jpg" class="d-block mb-3">
+                <img src="images/Battle Royale For PC & Console (C++)/06.jpg" alt="Project image 2" class="img-fluid rounded">
+                </a>
+                <a href="images/Battle Royale For PC & Console (C++)/07.jpg" class="d-block mb-3">
+                <img src="images/Battle Royale For PC & Console (C++)/07.jpg" alt="Project image 2" class="img-fluid rounded">
+                </a>
+                <a href="images/Battle Royale For PC & Console (C++)/08.jpg" class="d-block mb-3">
+                <img src="images/Battle Royale For PC & Console (C++)/08.jpg" alt="Project image 2" class="img-fluid rounded">
+                </a>
+                <a href="images/Battle Royale For PC & Console (C++)/09.jpg" class="d-block mb-3">
+                <img src="images/Battle Royale For PC & Console (C++)/09.jpg" alt="Project image 2" class="img-fluid rounded">
+                </a>
+                <a href="images/Battle Royale For PC & Console (C++)/10.jpg" class="d-block mb-3">
+                <img src="images/Battle Royale For PC & Console (C++)/10.jpg" alt="Project image 2" class="img-fluid rounded">
+                </a>
+
+            </div>
+            </div> 
+            </div>
+    </section> <!-- .section -->
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-around">
+          <div class="col-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Address</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            </div>
+          </div>
+          <div class="col-md-4 footer-social-column">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Social Media</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
